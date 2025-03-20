@@ -1,15 +1,22 @@
-var location1 = 3;
-var location2 = 4;
-var location3 = 5;
+var randomloc = Math.floor(Math.random () * 5);
 
-var guess;
-var hits = 0;
-var guesses = 0;
+var location1 = randomloc;
+var location2 = location1 = 1;
+var location3 = location = 2;
+
+let guess;
+let hits = 0;
+let guesses = 0;
 
 var isSunk = false;
 
 while (isSunk == false) {
     guess = prompt("Ready!, Bomba!, Na! 🧨 (Enter number 0-6");
+
+    if (guess == null) {
+        alert("Thank you erika na delete ang ubra");
+        break;
+    }
 
     if (guess < 0 || guess > 6) {
         alert("Please enter a valid cell number!")
